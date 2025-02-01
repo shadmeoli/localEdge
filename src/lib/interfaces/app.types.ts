@@ -12,5 +12,6 @@ export interface SyncInfo {
 export interface StoreState {
   isInitialized: boolean;
   syncInfo: SyncInfo;
+  isOnline: boolean;
   initialize: () => Promise<void>;
 }

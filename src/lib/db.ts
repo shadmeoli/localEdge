@@ -57,6 +57,13 @@ export class DatabaseManager {
     }
     return this.db;
   }
+
+  /**
+   * TODO:
+   *  - setup pooling to multi connection the store/db
+   *  - setup a context to handle the db connection and listen for cancelation -> like Go
+   *  - listen for batching and distribute loading to workers (idle workers and also check connectivity)
+   */
 }
 
 export const dbManager = new DatabaseManager();
