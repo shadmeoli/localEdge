@@ -11,7 +11,17 @@ export interface SyncInfo {
 
 export interface StoreState {
   isInitialized: boolean;
-  syncInfo: SyncInfo;
   isOnline: boolean;
+  syncInfo: {
+    lastSynced: number;
+    version: number;
+  };
   initialize: () => Promise<void>;
+  writeEntity: (id: string, data: any) => Promise<{
+    id: string;
+    data: any;
+    createdAt: number;
+    updatedAt: number;
+  }>;
+  deleteEntity: (id: string) => Promise<void>;
 }

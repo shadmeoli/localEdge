@@ -6,3 +6,6 @@ async function checkInitilization() {
   const isInitialized = useLocalStore.getState().isInitialized;
   console.log("Is store initialized:", isInitialized);
 }
+
+
+checkInitilization().then(response => console.log(response)).catch((err) => console.error(err))
