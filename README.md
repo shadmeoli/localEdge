@@ -22,6 +22,12 @@ npm install
 
 ## ⚡ Getting Started
 
+### Installation
+
+```bash
+npm install localedge
+```
+
 ```javascript
 import initSqlJs from "sql.js";
 import create from "zustand";
@@ -58,9 +64,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 ```
 localedge/
 ├── src/
-│   ├── index.js        # Main entry point
 │   ├── store.js        # Zustand store setup
 │   └── db.js           # SQL.js database logic
+├── index.js            # Main entry point
 ├── public/             # Static assets
 ├── package.json        # Project metadata
 └── README.md           # Project documentation
@@ -100,10 +106,10 @@ a.click();
 4. Push to the branch (`git push origin feature/your-feature`)
 5. Open a pull request
 
-
 ## Issues and bug fixes
 
 ### 🐛 Reporting Issues
+
 1. Check existing issues to avoid duplicates
 2. Use the issue template when creating a new issue
 3. Include the following information:
@@ -115,8 +121,9 @@ a.click();
    - Screenshots or code snippets (if applicable)
 
 ### 🔧 Submitting Bug Fixes
+
 1. Issues should be properly labeled with `bug` tag
-2. Branch naming convention: 
+2. Branch naming convention:
    - Format: `fix/brand-name/issue-description`
    - Example: `fix/localedge/database-sync-error`
 3. Commit message format:
@@ -127,6 +134,33 @@ a.click();
    - Include before/after test results
    - Update documentation if necessary
    - Add tests for the bug fix when applicable
+
+
+
+## Test Suite
+
+### 🧪 Overview
+The test suite uses Vitest with JSDOM environment for testing browser-like functionality.
+
+### 🛠️ Setup
+
+The test environment is configured with mocks for browser APIs:
+```typescript
+// Mock setup for browser APIs
+import { vi } from "vitest";
+
+global.navigator = {
+  onLine: true,
+  userAgent: "node",
+  language: "en-US"
+};
+
+global.window = {
+  addEventListener: vi.fn(),
+  removeEventListener: vi.fn()
+  // ... other window properties
+};
+```
 
 ## 📄 License
 
