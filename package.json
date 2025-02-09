@@ -1,6 +1,6 @@
 {
   "name": "localedge",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "dist/localedge.umd.js",
   "module": "dist/localedge.es.js",
