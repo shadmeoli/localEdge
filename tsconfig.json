@@ -10,12 +10,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "declaration": true,
+    "declarationDir": "./dist",
     "outDir": "./dist",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/lib"],
-  "exclude": ["node_modules", "dist"]
+  "include": ["src/lib", "src/index.ts"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
