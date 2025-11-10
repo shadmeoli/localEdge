@@ -65,6 +65,8 @@ export class DatabaseManager {
    *  - listen for batching and distribute loading to workers (idle workers and also check connectivity)
    */
   contentPooling() { }
+  contextHandler() { }
+  batchListner() { }
 }
 
 export const dbManager = new DatabaseManager();
