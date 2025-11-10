@@ -2,14 +2,14 @@
 
 A custom local-first data service built with **JavaScript**, utilizing **Zustand** for state management and **SQL.js** for complex data storage. This project ensures offline-first capabilities with seamless data persistence in the browser.
 
-## 🚀 Features
+## Features
 
 - **Local-First Architecture:** Operates entirely in the browser with offline support.
 - **State Management:** Powered by Zustand for efficient store management.
 - **SQL-Based Storage:** Uses SQL.js for managing complex relational data.
 - **Lightweight & Fast:** Optimized for performance with WebAssembly.
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repository
