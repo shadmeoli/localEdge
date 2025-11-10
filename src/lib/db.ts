@@ -64,6 +64,7 @@ export class DatabaseManager {
    *  - setup a context to handle the db connection and listen for cancelation -> like Go
    *  - listen for batching and distribute loading to workers (idle workers and also check connectivity)
    */
+  contentPooling() { }
 }
 
 export const dbManager = new DatabaseManager();
